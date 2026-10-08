@@ -1,23 +1,49 @@
-# RePrior: Measurement-Reconciled Prior Correction for Sparse-View CBCT Reconstruction
+<div align="center">
 
-**Manuscript under review at ICLR 2027**
+<h2>RePrior: Measurement-Reconciled Prior Correction for Sparse-View CBCT Reconstruction</h2>
 
-**Authors:** Mengrui Yin¹˒², Tianxingjian Ding¹, Wufan Zhao², Ziyang Yan³, Yu Tian¹
+<p>
+  <strong>Mengrui Yin</strong><sup>1,2</sup>,
+  Tianxingjian Ding<sup>1</sup>,
+  Wufan Zhao<sup>2</sup>,
+  Ziyang Yan<sup>3</sup>,
+  Yu Tian<sup>1</sup>
+</p>
 
-¹ University of Central Florida · ² The Hong Kong University of Science and Technology · ³ University of Trento
+<p>
+  <sup>1</sup> University of Central Florida<br>
+  <sup>2</sup> The Hong Kong University of Science and Technology<br>
+  <sup>3</sup> University of Trento
+</p>
 
-RePrior investigates how learned volumetric priors can improve patient-specific sparse-view cone-beam CT (CBCT) reconstruction while maintaining consistency with the acquired X-ray measurements.
+<p><em>Under review at ICLR 2027</em></p>
 
-Across LUNA16, PANORAMA, and PENGWIN, RePrior reports approximately **2.63 dB higher 3D PSNR on average** than R²-Gaussian in the paper's matched 25-view experiments.
+<p>
+  <a href="https://xxexgs.github.io/Reprior/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-brightgreen"></a>
+  <img alt="arXiv Coming Soon" src="https://img.shields.io/badge/arXiv-Coming%20Soon-b31b1b">
+  <a href="https://github.com/xxexgs/Reprior"><img alt="GitHub Repository" src="https://img.shields.io/badge/GitHub-Repository-24292f"></a>
+</p>
 
-## Project Page
+</div>
 
-This repository contains the academic project page, reconstruction comparisons, and supplementary 3D reconstruction video. The unpublished manuscript is not provided in this repository. Website:
+## Overview
 
-https://xxexgs.github.io/Reprior/
+RePrior is a progressive prior-correction framework for sparse-view cone-beam computed tomography (CBCT) reconstruction. It selectively transfers complementary anatomical information from learned volumetric priors into patient-specific Gaussian reconstruction while reconciling proposed 3D corrections with the measured X-ray projections.
+
+## Results
+
+In the paper's matched 25-view experiments across LUNA16, PANORAMA, and PENGWIN, RePrior reports an approximately **2.63 dB macro-average improvement in 3D PSNR** over R²-Gaussian.
+
+The [project page](https://xxexgs.github.io/Reprior/) presents the methodology, reconstruction comparisons, and a supplementary 3D reconstruction video. The **full manuscript PDF is not publicly provided** in this repository.
+
+## Resources
+
+- **Project Page:** https://xxexgs.github.io/Reprior/
+- **arXiv:** Coming soon (link will be added when available)
+- **Code:** Coming soon
 
 ## Code Availability
 
 **The code will be released upon acceptance of the paper.**
 
-This repository currently contains the project website and research presentation materials, not the implementation code.
+This repository currently hosts the academic project page and presentation materials, not the implementation code.
