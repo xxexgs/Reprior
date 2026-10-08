@@ -6,17 +6,19 @@
   <strong>Mengrui Yin</strong><sup>1,2</sup>,
   Tianxingjian Ding<sup>1</sup>,
   Wufan Zhao<sup>2</sup>,
-  Ziyang Yan<sup>3</sup>,
+  Ziyang Yan<sup>3,4,*</sup>,
   Yu Tian<sup>1</sup>
 </p>
 
 <p>
   <sup>1</sup> University of Central Florida<br>
   <sup>2</sup> The Hong Kong University of Science and Technology<br>
-  <sup>3</sup> University of Trento
+  <sup>3</sup> Tampere University<br>
+  <sup>4</sup> Ellis Institute Finland<br>
+  <small>* Corresponding author</small>
 </p>
 
-<p><em>Under review at ICLR 2027</em></p>
+
 
 <p>
   <a href="https://xxexgs.github.io/Reprior/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-brightgreen"></a>
