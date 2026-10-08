@@ -12,7 +12,7 @@
 
 <p>
   <sup>1</sup> University of Central Florida<br>
-  <sup>2</sup> The Hong Kong University of Science and Technology<br>
+  <sup>2</sup> The Hong Kong University of Science and Technology (Guangzhou)<br>
   <sup>3</sup> Tampere University<br>
   <sup>4</sup> Ellis Institute Finland<br>
   <small>* Corresponding author</small>
