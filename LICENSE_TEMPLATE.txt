@@ -1,0 +1,14 @@
+Website-template attribution and license notice
+
+The website layout is a derivative of the 3DSceneEditor academic project page:
+https://ziyangyan.github.io/3DSceneEditor/
+
+3DSceneEditor attributes its project page to the Nerfies template:
+https://nerfies.github.io/
+
+Source webpage license: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Adaptations: page content, styling, images, text, video, and paper links were changed for RePrior.
+
+RePrior manuscript, results, figures and video remain separate research materials and are not automatically sublicensed by this website-template notice.

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RePrior: Measurement-Reconciled Prior Correction for Sparse-View CBCT Reconstruction. Academic project page, manuscript, supplementary video and results.">
+  <meta name="keywords" content="RePrior, sparse-view CBCT, Gaussian reconstruction, tomography, ICLR 2027">
+  <title>RePrior: Measurement-Reconciled Prior Correction for Sparse-View CBCT Reconstruction</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">RePrior: Measurement-Reconciled Prior Correction<br class="is-hidden-mobile"> for Sparse-View CBCT Reconstruction</h1>
+            <div class="is-size-5 publication-authors author-list" aria-label="Authors">
+              <span>Mengrui Yin<sup>1,2</sup></span>,
+              <span>Tianxingjian Ding<sup>1</sup></span>,
+              <span>Wufan Zhao<sup>2</sup></span>,
+              <span>Ziyang Yan<sup>3</sup></span>,
+              <span>Yu Tian<sup>1</sup></span>
+            </div>
+            <div class="is-size-6 publication-affiliations" aria-label="Affiliations">
+              <div><sup>1</sup> University of Central Florida</div>
+              <div><sup>2</sup> The Hong Kong University of Science and Technology</div>
+              <div><sup>3</sup> University of Trento</div>
+            </div>
+            <div class="is-size-6 publication-status">Under review at ICLR 2027</div>
+            <div class="publication-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" href="./static/paper/RePrior_ICLR2027_anonymous.pdf" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" href="#video">
+                  <span class="icon"><i class="fas fa-video"></i></span><span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <span class="button is-normal is-rounded is-dark is-disabled" title="The code will be released upon acceptance of the paper" aria-disabled="true">
+                  <span class="icon"><i class="fab fa-github"></i></span><span>Code (Coming Soon)</span>
+                </span>
+              </span>
+            </div>
+            <p class="code-note">The code will be released upon acceptance of the paper.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Only the supplementary reconstruction video, no decorative photos or screenshot assets. -->
+  <section class="section teaser-area" id="video">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-11">
+          <video class="teaser-video" controls playsinline preload="none" poster="./static/images/reprior_video_poster.webp" aria-label="RePrior three-dimensional CBCT reconstruction comparison video">
+            <source src="./static/videos/reprior_reconstruction.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. <a href="./static/videos/reprior_reconstruction.mp4">Download the video</a>.
+          </video>
+          <p class="video-description">3D reconstruction comparisons on LUNA16, PANORAMA, and PENGWIN.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section academic-section" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>Sparse-view cone-beam computed tomography (CBCT) is severely under-constrained by limited X-ray projections. Learned reconstruction can provide complementary anatomical information, but using it as a prior in patient-specific Gaussian reconstruction introduces two challenges. First, the discrepancy between the learned prior and current reconstruction is spatially non-uniform: some local differences contain useful missing 3D information, whereas others reflect prior bias. Second, even a volumetrically beneficial correction can conflict with the observed X-ray measurements. Since X-ray measurements are line integrals, spatially separated corrections may affect overlapping rays, with their signed projection responses reinforcing or partially canceling in the measurement residual, so their feasibility cannot always be assessed independently.</p>
+            <p>In this paper, we introduce <strong>RePrior</strong>, a multi-stage progressive prior-correction framework that addresses correction actionability, measurement feasibility, and representation expressivity. <strong>Selective Correction Proposal (SCP)</strong> first identifies actionable signed local corrections from prior–reconstruction discrepancies. <strong>Measurement-Constrained Reconciliation (MCR)</strong> then jointly enforces their consistency with patient-specific X-ray measurements, while <strong>Hybrid Residual Enhancement (HRE)</strong> recovers additional correction capacity through complementary voxel- and Gaussian-domain degrees of freedom around the reconciled anchor. RePrior requires neither test-time ground truth nor case-specific network fine-tuning. RePrior gains approximately <strong>2.6 dB in 3D PSNR</strong> over R²-Gaussian across LUNA16, PANORAMA, and PENGWIN. Beyond prior-assisted reconstruction, it delivers additional gains in volumetric quality and observed-view projection fidelity, with consistent gains in held-out-view fidelity in the backbone-matched evaluation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section academic-section" id="pipeline">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Pipeline</h2>
+          <figure class="figure-container">
+            <a href="./static/images/reprior_pipeline.png" target="_blank" rel="noopener noreferrer" title="View full-resolution pipeline">
+              <img src="./static/images/reprior_pipeline.png" loading="lazy" alt="Overview of RePrior: learned prior and prior-assisted Gaussian reconstruction, SCP, MCR, and HRE">
+            </a>
+            <figcaption class="figure-caption">Overview of RePrior. Starting from a learned volumetric prior and a prior-assisted Gaussian reconstruction, SCP proposes selective corrections; MCR reconciles their joint X-ray measurement responses; and HRE enhances the reconciled result using voxel- and Gaussian-domain residual freedom.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section academic-section" id="comparisons">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Comparisons</h2>
+          <figure class="figure-container">
+            <a href="./static/images/reprior_comparison.png" target="_blank" rel="noopener noreferrer" title="View full-resolution reconstruction comparisons">
+              <img src="./static/images/reprior_comparison.png" loading="lazy" alt="Qualitative comparison of sparse-view CBCT reconstructions on LUNA16, PANORAMA and PENGWIN">
+            </a>
+            <figcaption class="figure-caption">Qualitative comparisons on representative LUNA16, PANORAMA, and PENGWIN cases, as presented in the submitted paper (Fig. 5). Red and cyan boxes identify local regions. Click to view the original high-resolution figure.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="columns is-centered" style="margin-top: 1.65rem;">
+        <div class="column is-four-fifths">
+          <p class="table-caption has-text-centered"><strong>3D reconstruction PSNR (dB)</strong> — 25-view setting</p>
+          <div class="table-container">
+            <table class="table is-fullwidth is-striped" aria-label="3D PSNR comparison on three CBCT datasets">
+              <thead><tr><th>Method</th><th>LUNA16 (90)</th><th>PANORAMA (90)</th><th>PENGWIN (50)</th></tr></thead>
+              <tbody>
+                <tr><td>R²-GS</td><td>29.12</td><td>28.42</td><td>30.29</td></tr>
+                <tr><td>DeepSparse-25</td><td>30.85</td><td>28.87</td><td>29.33</td></tr>
+                <tr class="is-highlight"><td>RePrior (Ours)</td><td>32.58</td><td>30.80</td><td>32.33</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="content has-text-justified">
+            <p>RePrior improves volumetric PSNR over R²-GS by 3.46 dB, 2.38 dB, and 2.04 dB on LUNA16, PANORAMA, and PENGWIN, respectively. The main paper and its appendix provide the complete baseline comparison, ablations, and held-out-view evaluation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section academic-section" id="bibtex">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">BibTeX</h2>
+      <div class="bibtex">
+<pre><code>@misc{yin2026reprior,
+  title  = {RePrior: Measurement-Reconciled Prior Correction for Sparse-View CBCT Reconstruction},
+  author = {Yin, Mengrui and Ding, Tianxingjian and Zhao, Wufan and Yan, Ziyang and Tian, Yu},
+  year   = {2026},
+  note   = {Manuscript under review at ICLR 2027}
+}</code></pre>
+      </div>
+      <p class="has-text-grey is-size-7">Pre-publication citation. Publication details will be updated after a final decision.</p>
+    </div>
+  </section>
+
+</body>
+</html>
