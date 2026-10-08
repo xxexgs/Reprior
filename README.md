@@ -12,7 +12,7 @@ Across LUNA16, PANORAMA, and PENGWIN, RePrior reports approximately **2.63 dB hi
 
 ## Project Page
 
-This repository contains the academic project page, manuscript, reconstruction comparisons, and supplementary 3D reconstruction video. Once GitHub Pages is enabled, the website can be visited at:
+This repository contains the academic project page, reconstruction comparisons, and supplementary 3D reconstruction video. The unpublished manuscript is not provided in this repository. Website:
 
 https://xxexgs.github.io/Reprior/
 
