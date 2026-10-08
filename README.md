@@ -2,7 +2,7 @@
 
 **Manuscript under review at ICLR 2027**
 
-**Authors:** Mengrui Yin¹, Tianxingjian Ding¹, Wufan Zhao², Ziyang Yan³, Yu Tian¹
+**Authors:** Mengrui Yin¹˒², Tianxingjian Ding¹, Wufan Zhao², Ziyang Yan³, Yu Tian¹
 
 ¹ University of Central Florida · ² The Hong Kong University of Science and Technology · ³ University of Trento
 
